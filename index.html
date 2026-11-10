@@ -7,26 +7,20 @@
     <link rel="stylesheet" href="style/style.css">
   </head>
   <body>
-    <!-- 1. Селектор тега та псевдоклас :hover -->
     <h1>Селектор тега за ховером</h1>
     <p class="explanation">При наведенні курсора колір заголовка змінюється завдяки :hover.</p>
 
-    <!-- 2. Селектор класу -->
     <p class="example">Приклад селектора класу (.example).</p>
 
-    <!-- 3. Конфлікт 1: селектори класу -->
     <h2 class="class-selector class-two">Конфлікт 1: селектори класу</h2>
     <p class="explanation">Перемагає .class-selector.class-two (0,2,0), оскільки його специфічність вища за .class-selector (0,1,0).</p>
 
     <section>
-      <!-- 4. Конфлікт 2: ID проти класу -->
       <h3 class="class-selector" id="id-selector">Конфлікт 2: ID проти класу</h3>
       <p class="explanation">Перемагає #id-selector (1,0,0), оскільки його специфічність вища за h3.class-selector (0,1,1).</p>
 
-      <!-- 5. Дочірній селектор -->
       <p>Цей абзац оформлено селектором section > p.</p>
 
-      <!-- 6. Псевдоклас :not() -->
       <ul>
         <li>Перший пункт (без зміни кольору)</li>
         <li>Другий пункт (:not(:first-child))</li>
@@ -34,11 +28,9 @@
       </ul>
       <p class="explanation">Селектор :not(:first-child) застосовується до всіх пунктів, крім першого.</p>
 
-      <!-- 7. Селектор атрибута -->
       <input type="text" placeholder="Селектор [type='text']">
       <p class="explanation">Селектор input[type="text"] знаходить поля з атрибутом type="text".</p>
 
-      <!-- 8. Псевдоклас :focus та псевдоелемент ::after -->
       <button type="button">Перевір стан фокусу</button>
       <p class="explanation">Після переходу клавішею Tab кнопка отримує виділення завдяки :focus.</p>
     </section>
