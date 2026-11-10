@@ -1,0 +1,78 @@
+
+/* 1. Селектор тега та псевдоклас :hover */
+h1 {
+  color: red;
+  font-size: 30px;
+  text-align: center;
+}
+
+h1:hover {
+  color: darkred;
+}
+
+/* 2. Селектор класу */
+.example {
+  color: blue;
+  font-size: 20px;
+}
+
+/* Пояснення */
+.explanation {
+  font-style: italic;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* 3. Конфлікт 1: селектори класу */
+.class-selector {
+  color: blue;
+  font-size: 20px;
+}
+
+.class-selector.class-two {
+  color: green;
+  font-size: 22px;
+}
+
+/* 4. Конфлікт 2: ID проти класу */
+h3.class-selector {
+  color: orange;
+}
+
+#id-selector {
+  color: purple;
+  font-size: 25px;
+}
+
+/* 5. Дочірній селектор */
+section > p {
+  color: #D35400;
+  font-size: 18px;
+}
+
+/* 6. Псевдоклас :not() */
+ul li:not(:first-child) {
+  color: green;
+}
+
+/* 7. Селектор атрибута */
+input[type="text"] {
+  border: 2px solid purple;
+  padding: 5px;
+  background-color: #f0f0f0;
+}
+
+/* 8. Псевдоклас :focus та псевдоелемент ::after */
+button:hover,
+button:focus {
+  background-color: lightblue;
+  outline: 2px solid blue;
+  cursor: pointer;
+}
+
+button::after {
+  content: " (:focus)";
+  color: gray;
+  font-size: 12px;
+}
